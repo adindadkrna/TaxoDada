@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxo Dada</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fdd37e;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .navbar {
+            background-color: #a12c2c;
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+        .hero img {
+            width: 1300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5em;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: #a12c2c;
+        }
+        .tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px;
+            background: white;
+            border-radius: 15px;
+            margin: 20px 10px;
+        }
+        .tags span {
+            margin: 5px 10px;
+            font-size: 1.2em;
+        }
+        .menu, .bestseller {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+        .menu-item, .bestseller-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+        .menu-item img, .bestseller-item img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .order-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 1em;
+            color: white;
+            background-color: #a12c2c;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .order-button:hover {
+            background-color: #c74343;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #fdd37e;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .footer-about {
+            text-align: left;
+            color: #a12c2c;
+        }
+
+        .footer-about h3 {
+            margin-bottom: 5px;
+        }
+
+        .footer-about p {
+            margin: 3px 0;
+        }
+
+        .footer-text {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .footer-text h2 {
+            color: #a12c2c;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .footer-text p {
+            color: #a12c2c;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .footer-logo {
+            text-align: right;
+        }
+
+        .footer-logo img {
+            width: 80px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">About</a>
+        <span>Taxo Dada</span>
+        <div>
+            <a href="#">&#x1F4F7;</a>
+            <a href="#">&#127911;</a>
+            <a href="#">&#128100;</a>
+        </div>
+    </div>
+    <div class="hero">
+        <img src="BG.jpg" alt="Taxodada">
+        <div class="hero-text">Nikmati Gurih dan Lezatnya Tahu Bakso!</div>
+    </div>
+    <div class="tags">
+        <span>Saus Thai Sweet🌶️</span>
+        <span>Saus Hot Lava🔥</span>
+        <span>Saus Chili Oil🌶️</span>
+    </div>    
+    <h2>Best Seller</h2>
+    <div class="bestseller">
+        <div class="bestseller-item">
+            <img src="TP CRAB STIK.jpg" alt="Tahu Bakso Crab Stick">
+            <h3>Tahu Bakso Crab Stick</h3>
+            <p>Rp 3,000</p>
+            <p>Sensasi rasa laut yang khas, jadi favorit banyak pelanggan!</p>
+            <button class="order-button" onclick="orderNow('Tahu Bakso Crab Stick')">Order Now</button>
+        </div>
+    </div>
+    <h2>Our Menu</h2>
+    <div class="menu">
+        <div class="menu-item">
+            <img src="TP BAKSO.jpg" alt="Tahu Bakso Toping Bakso">
+            <h3>Tahu Bakso Toping Bakso</h3>
+            <p>Rp 3,000</p>
+            <button class="order-button" onclick="orderNow('Tahu Bakso Toping Bakso')">Order Now</button>
+        </div>
+        <div class="menu-item">
+            <img src="TP CRAB STIK.jpg" alt="Tahu Bakso Crab Stick">
+            <h3>Tahu Bakso Crab Stick</h3>
+            <p>Rp 3,000</p>
+            <button class="order-button" onclick="orderNow('Tahu Bakso Crab Stick')">Order Now</button>
+        </div>
+        <div class="menu-item">
+            <img src="TP CABE.jpg" alt="Tahu Bakso Irisan Cabai">
+            <h3>Tahu Bakso Irisan Cabai</h3>
+            <p>Rp 3,000</p>
+            <button class="order-button" onclick="orderNow('Tahu Bakso Irisan Cabai')">Order Now</button>
+        </div>
+        <div class="menu-item">
+            <img src="TP SOSIS.jpg" alt="Tahu Bakso Sosis">
+            <h3>Tahu Bakso Sosis</h3>
+            <p>Rp 3,000</p>
+            <button class="order-button" onclick="orderNow('Tahu Bakso Sosis')">Order Now</button>
+        </div>
+        <div class="menu-item">
+            <img src="TP KEJU.jpg" alt="Tahu Bakso Keju">
+            <h3>Tahu Bakso Keju</h3>
+            <p>Rp 3,000</p>
+            <button class="order-button" onclick="orderNow('Tahu Bakso Keju')">Order Now</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-about">
+            <h3>About</h3>
+            <p>@taxodada.mlg</p>
+            <p>(+62) 857-5545-4562</p>
+        </div>
+
+        <div class="footer-text">
+            <h2>Taxo Dada</h2>
+            <p>Siap disantap pakai saus favorit kamu!</p>
+        </div>
+
+        <div class="footer-logo">
+            <img src="LOGO.png" alt="Taxo Dada Logo">
+        </div>
+    </footer>
+
+    <script>
+        function orderNow(item) {
+            let phoneNumber = "6285755454562";
+            let message = encodeURIComponent(`Halo! Saya ingin memesan ${item}. Apakah tersedia?`);
+            let waLink = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.location.href = waLink;
+        }
+    </script>
+</body>
+</html>
